@@ -45,6 +45,7 @@ public enum ImageLoader {
     }
 
     /// Same as `image(_:fallback:)` but already `.resizable()`.
+    @MainActor
     public static func resizable(
         _ name: String,
         fallback: String = "photo"
@@ -55,6 +56,7 @@ public enum ImageLoader {
     /// Convenience: full-bleed background image filling the entire
     /// view, ignoring safe area. Use as the bottom layer of a
     /// `ZStack`.
+    @MainActor
     public static func background(_ name: String) -> some View {
         resizable(name)
             .aspectRatio(contentMode: .fill)
