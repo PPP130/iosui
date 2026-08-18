@@ -10,9 +10,12 @@ targets:
     type: application
     platform: iOS
     sources:
-      - path: app
+      - path: .
         excludes:
           - "README.md"
+          - ".gitignore"
+          - ".github"
+          - "project.yml"
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.hi.app
