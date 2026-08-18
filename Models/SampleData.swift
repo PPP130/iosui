@@ -1,14 +1,14 @@
 import Foundation
 
-struct MoodBottle: Identifiable, Hashable {
-    let id: UUID
-    var mood: MoodTag
-    var text: String
-    var authorName: String
-    var colorHex: String
-    var createdAt: Date
+public struct MoodBottle: Identifiable, Hashable {
+    public let id: UUID
+    public var mood: MoodTag
+    public var text: String
+    public var authorName: String
+    public var colorHex: String
+    public var createdAt: Date
 
-    init(
+    public init(
         id: UUID = UUID(),
         mood: MoodTag,
         text: String,
@@ -25,11 +25,11 @@ struct MoodBottle: Identifiable, Hashable {
     }
 }
 
-enum SampleData {
+public enum SampleData {
 
     // MARK: - Users
 
-    static let lex: User = User(
+    public static let lex: User = User(
         name: "Lex",
         avatarColor: "#F5F5F5",
         bio: "White-haired dreamer. Soft nights, loud thoughts.",
@@ -37,7 +37,7 @@ enum SampleData {
         isFollowing: true
     )
 
-    static let marlowe: User = User(
+    public static let marlowe: User = User(
         name: "Marlowe",
         avatarColor: "#A0E8F0",
         bio: "Quiet observer. I collect moments, not things.",
@@ -45,7 +45,7 @@ enum SampleData {
         isFollowing: false
     )
 
-    static let camille: User = User(
+    public static let camille: User = User(
         name: "Camille",
         avatarColor: "#FFB5C5",
         bio: "Hearts that speak louder than words.",
@@ -53,7 +53,7 @@ enum SampleData {
         isFollowing: true
     )
 
-    static let rowan: User = User(
+    public static let rowan: User = User(
         name: "Rowan",
         avatarColor: "#C8B6FF",
         bio: "Stargazer. Half here, half somewhere far.",
@@ -61,16 +61,16 @@ enum SampleData {
         isFollowing: false
     )
 
-    static let sampleUsers: [User] = [lex, marlowe, camille, rowan]
+    public static let sampleUsers: [User] = [lex, marlowe, camille, rowan]
 
     // MARK: - Followings / Blacklists
 
-    static let sampleFollowings: [User] = [lex, camille]
-    static let sampleBlacklists: [User] = [rowan]
+    public static let sampleFollowings: [User] = [lex, camille]
+    public static let sampleBlacklists: [User] = [rowan]
 
     // MARK: - Posts
 
-    static let samplePosts: [Post] = [
+    public static let samplePosts: [Post] = [
         Post(
             author: lex,
             text: "Tonight the sky feels heavier than usual. Holding a quiet wish for everyone reading this.",
@@ -120,7 +120,7 @@ enum SampleData {
 
     // MARK: - AI Characters
 
-    static let sampleAICharacters: [AICharacter] = [
+    public static let sampleAICharacters: [AICharacter] = [
         AICharacter(name: "Selene",    colorHex: "#A0E8F0", personality: "Gentle night companion, asks soft questions."),
         AICharacter(name: "Harper",    colorHex: "#FFB5C5", personality: "Warm and chatty, like a friend at a cafe."),
         AICharacter(name: "Vivienne",  colorHex: "#C8B6FF", personality: "Quietly poetic, finds metaphors in small things."),
@@ -135,7 +135,7 @@ enum SampleData {
 
     // MARK: - Mood Groups
 
-    static let sampleMoodGroups: [MoodGroup] = [
+    public static let sampleMoodGroups: [MoodGroup] = [
         MoodGroup(
             name: "Quiet Thoughts",
             description: "A circle for the things you almost didn't say.",
@@ -176,7 +176,7 @@ enum SampleData {
 
     // MARK: - Chat Messages
 
-    static let sampleMessages: [Message] = [
+    public static let sampleMessages: [Message] = [
         Message(senderId: lex.id,      text: "Hi, I just wanted to say the moon looked beautiful tonight.",   isFromCurrentUser: false),
         Message(senderId: User.sampleCurrentId, text: "I saw it too. Did it feel a little closer to you?",     isFromCurrentUser: true),
         Message(senderId: lex.id,      text: "Yes. The kind of night where you want to tell someone.",          isFromCurrentUser: false),
@@ -206,7 +206,7 @@ enum SampleData {
 
     // MARK: - Mood Bottles
 
-    static let sampleMoodBottles: [MoodBottle] = [
+    public static let sampleMoodBottles: [MoodBottle] = [
         MoodBottle(mood: .calm,    text: "I watched the rain for a long time today and forgot to worry.", authorName: "Marlowe", colorHex: "#A0E8F0"),
         MoodBottle(mood: .lonely,  text: "I miss someone I have not thought about in years.",             authorName: "Lex",     colorHex: "#C8B6FF"),
         MoodBottle(mood: .anxious, text: "My chest has been loud all day. I am still here though.",         authorName: "Camille", colorHex: "#FFB5C5"),
@@ -217,7 +217,7 @@ enum SampleData {
     ]
 }
 
-private extension User {
+extension User {
     // A stable id used for "current user" messages in sample chat data.
     static let sampleCurrentId: UUID = UUID(uuidString: "00000000-0000-0000-0000-000000000001")!
 }

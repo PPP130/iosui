@@ -1,13 +1,13 @@
 import Foundation
 
-struct Message: Identifiable, Hashable {
-    let id: UUID
-    var senderId: UUID
-    var text: String
-    var isFromCurrentUser: Bool
-    var timestamp: Date
+public struct Message: Identifiable, Hashable {
+    public let id: UUID
+    public var senderId: UUID
+    public var text: String
+    public var isFromCurrentUser: Bool
+    public var timestamp: Date
 
-    init(
+    public init(
         id: UUID = UUID(),
         senderId: UUID,
         text: String,

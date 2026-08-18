@@ -13,7 +13,7 @@ import SwiftUI
 
 public struct MyProfileView: View {
 
-    @State private var selectedTab: AppTab = .me
+    @State private var selectedTab: TabBarItem = .me
 
     public init() {}
 
@@ -34,7 +34,7 @@ public struct MyProfileView: View {
 
     private var tabBarOverlay: some View {
         HStack(spacing: 0) {
-            ForEach(AppTab.allCases) { tab in
+            ForEach(TabBarItem.allCases) { tab in
                 Button {
                     selectedTab = tab
                 } label: {

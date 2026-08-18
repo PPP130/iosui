@@ -1,6 +1,6 @@
 import Foundation
 
-enum MoodTag: String, CaseIterable, Identifiable, Hashable {
+public enum MoodTag: String, CaseIterable, Identifiable, Hashable {
     case happy
     case sad
     case anxious
@@ -8,9 +8,9 @@ enum MoodTag: String, CaseIterable, Identifiable, Hashable {
     case excited
     case lonely
 
-    var id: String { rawValue }
+    public var id: String { rawValue }
 
-    var displayName: String {
+    public var displayName: String {
         switch self {
         case .happy:   return "Happy"
         case .sad:     return "Sad"

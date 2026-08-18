@@ -1,16 +1,16 @@
 import Foundation
 
-struct Post: Identifiable, Hashable {
-    let id: UUID
-    var author: User
-    var text: String
-    var imageName: String
-    var moodTag: String
-    var likes: Int
-    var comments: Int
-    var createdAt: Date
+public struct Post: Identifiable, Hashable {
+    public let id: UUID
+    public var author: User
+    public var text: String
+    public var imageName: String
+    public var moodTag: String
+    public var likes: Int
+    public var comments: Int
+    public var createdAt: Date
 
-    init(
+    public init(
         id: UUID = UUID(),
         author: User,
         text: String,

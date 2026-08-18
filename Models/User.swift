@@ -1,14 +1,14 @@
 import Foundation
 
-struct User: Identifiable, Hashable {
-    let id: UUID
-    var name: String
-    var avatarColor: String
-    var bio: String
-    var coinBalance: Int
-    var isFollowing: Bool
+public struct User: Identifiable, Hashable {
+    public let id: UUID
+    public var name: String
+    public var avatarColor: String
+    public var bio: String
+    public var coinBalance: Int
+    public var isFollowing: Bool
 
-    init(
+    public init(
         id: UUID = UUID(),
         name: String,
         avatarColor: String,

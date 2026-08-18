@@ -1,13 +1,13 @@
 import Foundation
 
-struct MoodGroup: Identifiable, Hashable {
-    let id: UUID
-    var name: String
-    var description: String
-    var memberAvatars: [String]
-    var category: String
+public struct MoodGroup: Identifiable, Hashable {
+    public let id: UUID
+    public var name: String
+    public var description: String
+    public var memberAvatars: [String]
+    public var category: String
 
-    init(
+    public init(
         id: UUID = UUID(),
         name: String,
         description: String = "",

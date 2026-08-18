@@ -1,13 +1,13 @@
 import Foundation
 
-struct AICharacter: Identifiable, Hashable {
-    let id: UUID
-    var name: String
-    var colorHex: String
-    var personality: String
-    var isSelected: Bool
+public struct AICharacter: Identifiable, Hashable {
+    public let id: UUID
+    public var name: String
+    public var colorHex: String
+    public var personality: String
+    public var isSelected: Bool
 
-    init(
+    public init(
         id: UUID = UUID(),
         name: String,
         colorHex: String,
