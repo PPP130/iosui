@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# XcodeGen 生成的工程文件（CI 现场生成，不提交）
+*.xcodeproj
+*.xcworkspace
+
+# Xcode 构建产物
+build/
+DerivedData/
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Xcode 用户数据
+xcuserdata/
+*.xcuserstate
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# 截图产物
+screenshot-*.png
